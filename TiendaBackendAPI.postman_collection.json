@@ -1,0 +1,160 @@
+{
+  "info": {
+    "_postman_id": "a1b2c3d4-e5f6-7890-abcd-1234567890ab",
+    "name": "Tienda Backend API",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "description": "Colección para probar los endpoints del backend de Tienda."
+  },
+  "item": [
+    {
+      "name": "Bienvenida",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": [""]
+        }
+      }
+    },
+    {
+      "name": "Obtener productos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/productos",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["productos"]
+        }
+      }
+    },
+    {
+      "name": "Crear producto",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre_producto\": \"Ejemplo\",\n  \"imagen_url\": \"http://imagen.com/img.jpg\",\n  \"descripcion\": \"Descripción de ejemplo\",\n  \"precio\": 10.99\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/productos",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["productos"]
+        }
+      }
+    },
+    {
+      "name": "Obtener usuarios",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/usuarios",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["usuarios"]
+        }
+      }
+    },
+    {
+      "name": "Crear usuario",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nombre_usuario\": \"Juan\",\n  \"email\": \"juan@email.com\"\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/usuarios",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["usuarios"]
+        }
+      }
+    },
+    {
+      "name": "Obtener pedidos",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/pedidos",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["pedidos"]
+        }
+      }
+    },
+    {
+      "name": "Crear pedido",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_usuario\": 1,\n  \"fecha_pedido\": \"2025-09-09\",\n  \"total\": 100.50\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/pedidos",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["pedidos"]
+        }
+      }
+    },
+    {
+      "name": "Obtener detalles de pedido",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://127.0.0.1:5000/detalles_pedido",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["detalles_pedido"]
+        }
+      }
+    },
+    {
+      "name": "Crear detalle de pedido",
+      "request": {
+        "method": "POST",
+        "header": [
+          {"key": "Content-Type", "value": "application/json"}
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id_pedido\": 1,\n  \"id_producto\": 1,\n  \"cantidad\": 2,\n  \"precio_unitario\": 10.99\n}"
+        },
+        "url": {
+          "raw": "http://127.0.0.1:5000/detalles_pedido",
+          "protocol": "http",
+          "host": ["127.0.0.1"],
+          "port": "5000",
+          "path": ["detalles_pedido"]
+        }
+      }
+    }
+  ]
+}

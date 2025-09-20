@@ -9,6 +9,7 @@ class Producto(db.Model):
     imagen_url = db.Column(db.String(200))
     descripcion = db.Column(db.Text)
     precio = db.Column(db.Numeric(10, 2), nullable=False)
+    activo = db.Column(db.Boolean, default=True, nullable=False)
 
 class Usuario(db.Model):
     __tablename__ = 'usuarios'

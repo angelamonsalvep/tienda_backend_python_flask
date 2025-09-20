@@ -1,3 +1,5 @@
+# Dependencia para manejo de variables de entorno
+python-dotenv
 alembic==1.16.5
 blinker==1.9.0
 click==8.2.1

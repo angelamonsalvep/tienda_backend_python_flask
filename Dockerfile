@@ -17,8 +17,8 @@ RUN pip install --no-cache-dir -r requirements.txt
 # Copiar el resto del proyecto
 COPY . .
 
-# Exponer el puerto de Flask
+# Exponer el puerto
 EXPOSE 5000
 
-# Comando por defecto (puedes cambiar "app:app" si usas otra estructura)
-CMD ["python", "app.py"]
+# Usar Gunicorn para correr Flask en producción
+CMD ["gunicorn", "--bind", "0.0.0.0:5000", "app:app"]

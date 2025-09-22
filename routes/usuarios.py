@@ -18,7 +18,16 @@ def get_usuarios():
 
 @usuarios_bp.route('/usuarios', methods=['POST'])
 def crear_usuario():
+    import logging
     data = request.json
+    # Buscar si ya existe el usuario por email
+    usuario_existente = Usuario.query.filter_by(email=data['email']).first()
+    if usuario_existente:
+        logging.info(f"El usuario con email {data['email']} ya existe.")
+        return {
+            'mensaje': 'El usuario ya existe', 
+            'id_usuario': usuario_existente.id_usuario
+        }, 409
     usuario = Usuario(
         nombre_usuario=data['nombre_usuario'],
         email=data['email']

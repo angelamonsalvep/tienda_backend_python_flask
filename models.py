@@ -6,7 +6,7 @@ class Producto(db.Model):
     __tablename__ = 'productos'
     id_producto = db.Column(db.Integer, primary_key=True)
     nombre_producto = db.Column(db.String(100), nullable=False)
-    imagen_url = db.Column(db.String(200))
+    imagen_url = db.Column(db.Text)  # Ahora almacena un JSON serializado (string)
     descripcion = db.Column(db.Text)
     precio = db.Column(db.Numeric(10, 2), nullable=False)
     activo = db.Column(db.Boolean, default=True, nullable=False)

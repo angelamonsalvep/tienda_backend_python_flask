@@ -1,6 +1,6 @@
 # Especificación: Creación Automatizada de Vistas de Analítica SQL
 
-> **Estado:** Aprobado · **Depende de:** 01-configuracion-entorno-db · **Fecha:** 2026-06-09
+> **Estado:** Implementado · **Depende de:** 01-configuracion-entorno-db · **Fecha:** 2026-06-09
 > **Objetivo:** Asegurar la existencia y estructura de las vistas SQL de analítica (`vista_pedidos_detallados` y `vista_productos_mas_vendidos`) de forma automatizada en la base de datos al iniciar la aplicación Flask.
 
 ## Alcance (Scope)

@@ -9,6 +9,7 @@ __pycache__/
 
 # Archivos de configuración de entorno
 .env
+.env.local
 
 # Archivos de bases de datos locales
 *.sqlite3

@@ -1,6 +1,11 @@
 from flask import Flask
 from flask_cors import CORS
 from dotenv import load_dotenv
+
+# Cargar .env.local con prioridad sobre .env antes de importar otros módulos
+load_dotenv('.env.local')
+load_dotenv('.env')
+
 from config import Config
 from models import db
 from routes.productos import productos_bp
@@ -9,7 +14,6 @@ from routes.pedidos import pedidos_bp
 from routes.detalles_pedido import detalles_bp
 from routes.analitica import analitica_bp
 
-load_dotenv()
 app = Flask(__name__)
 app.config.from_object(Config)
 db.init_app(app)
